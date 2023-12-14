@@ -1,5 +1,4 @@
 package org.example;
-
 public class Main {
     public static void main(String[] args)
     {
@@ -8,12 +7,14 @@ public class Main {
         printColor();
         compareNumbers();
     }
+
     public static void printThreeWords()
     {
         System.out.println("Orange");
         System.out.println("Banana");
         System.out.println("Apple");
     }
+
     public static void checkSumSign()
     {
         int a = 5;
@@ -22,9 +23,10 @@ public class Main {
         String result = (a + b) >= 0 ? "Сумма положительная" : "Сумма отрицательная";
         System.out.println(result);
     }
+
     public static void printColor()
     {
-        int value = 101;
+        int value = 100;
 
         if(value <= 0){
             System.out.println("Красный");
