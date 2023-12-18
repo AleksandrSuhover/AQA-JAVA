@@ -2,9 +2,9 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
         printThreeWords();
-        checkSumSign();
-        printColor();
-        compareNumbers();
+        checkSumSign(2, 3);
+        printColor(100);
+        compareNumbers(5, 2);
     }
 
     public static void printThreeWords()
@@ -14,18 +14,17 @@ public class Main {
         System.out.println("Apple");
     }
 
-    public static void checkSumSign()
+    public static void checkSumSign(int one, int two)
     {
-        int a = 5;
-        int b = -5;
-        String result = (a + b) >= 0 ? "Сумма положительная" : "Сумма отрицательная";
-        System.out.println(result);
+            int a = one;
+            int b = two;
+            String result = (a + b) >= 0 ? "Сумма положительная" : "Сумма отрицательная";
+            System.out.println(result);
     }
 
-    public static void printColor()
+    public static void printColor(int num)
     {
-        int value = 101;
-        int value = 100;
+        int value = num;
 
         if(value <= 0){
             System.out.println("Красный");
@@ -36,10 +35,10 @@ public class Main {
         }
     }
 
-    public static void compareNumbers()
+    public static void compareNumbers(int one, int two)
     {
-        int a = 5;
-        int b = 6;
+        int a = one;
+        int b = two;
         String result = a >= b ? "a >= b" : "a < b";
         System.out.println(result);
     }
