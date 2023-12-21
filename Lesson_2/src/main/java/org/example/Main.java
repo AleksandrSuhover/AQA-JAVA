@@ -1,45 +1,35 @@
 package org.example;
 public class Main {
     public static void main(String[] args) {
-        printThreeWords();
-        checkSumSign(2, 3);
-        printColor(100);
-        compareNumbers(5, 2);
+        System.out.println(checkNumbersForRange(4, 17));
+        checkNumberForPositivity(-5);
+        System.out.println(checkNumberForNegativity(0));
+        printTextInConsole("Hello world!", 2);
+        checkLeapYear(8);
     }
 
-    public static void printThreeWords()
-    {
-        System.out.println("Orange");
-        System.out.println("Banana");
-        System.out.println("Apple");
+    public static Boolean checkNumbersForRange(int firstNum, int secondNum){
+        int sumNumbers = firstNum + secondNum;
+        return sumNumbers >= 10 && sumNumbers <= 20 ? true : false;
     }
 
-    public static void checkSumSign(int one, int two)
-    {
-            int a = one;
-            int b = two;
-            String result = (a + b) >= 0 ? "Сумма положительная" : "Сумма отрицательная";
-            System.out.println(result);
+    public static void checkNumberForPositivity(int number){
+        System.out.println(number >= 0 ? "Переданное число положительное."
+                : "Переданное число отрицательное.");
     }
 
-    public static void printColor(int num)
-    {
-        int value = num;
+    public static Boolean checkNumberForNegativity(int number){
+        return number < 0 ? true : false;
+    }
 
-        if(value <= 0){
-            System.out.println("Красный");
-        } else if(value <= 100){
-            System.out.println("Жёлтый");
-        } else {
-            System.out.println("Зелёный");
+    public static void printTextInConsole(String textToPrint, int quantity){
+        while (quantity > 0){
+            System.out.println(textToPrint);
+            --quantity;
         }
     }
 
-    public static void compareNumbers(int one, int two)
-    {
-        int a = one;
-        int b = two;
-        String result = a >= b ? "a >= b" : "a < b";
-        System.out.println(result);
+    public static void checkLeapYear(int year){
+        System.out.println(year % 4);
     }
 }
